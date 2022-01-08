@@ -2,14 +2,17 @@
   <div class>
     <MainHeader />
     <AdBanner />
-    <div class="featured">
+<div class="container">    <div class="featured">
       <div class="featured-title">FEATURED CHARACTERS</div>
       <FeaturedCharacters />
+    </div>
+    <Search/>
     </div>
   </div>
 </template>
 
 <script>
+import Search from "@/components/Search.vue"
 import MainHeader from "@/components/MainHeader.vue";
 import AdBanner from "@/components/AdBanner.vue";
 import FeaturedCharacters from "@/components/FeaturedCharacters.vue";
@@ -20,6 +23,7 @@ export default {
     MainHeader,
     AdBanner,
     FeaturedCharacters,
+    Search,
   },
 };
 </script>
@@ -37,5 +41,6 @@ export default {
 .featured {
   align-items: center;
   justify-content: center;
+  max-width: 1200px;
 }
 </style>

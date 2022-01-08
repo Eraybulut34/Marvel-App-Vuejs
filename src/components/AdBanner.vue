@@ -1,7 +1,7 @@
 <template>
   <div class="ad-banner">
     <div class="banner-inner">
-      <img src="../assets/images/adbanner.jpg" alt="img" /> <br />
+      <img src="../assets/images/adbanner.jpg" alt="img" href="www.marvel.com" /> <br />
       Advertise
     </div>
   </div>

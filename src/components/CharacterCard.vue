@@ -27,6 +27,7 @@ export default {
 <style scoped>
 .character-card {
   margin: auto;
+  padding: 1.3rem;
 }
 
 .up {

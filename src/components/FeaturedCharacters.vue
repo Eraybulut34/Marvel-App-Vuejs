@@ -50,13 +50,20 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .featured-characters {
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(40%,1fr));
+max-width: 100%;
+justify-content: space-around;
+    @media (--t) {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(15.82%,1fr));;
+  grid-template-columns: repeat(auto-fit,minmax(15.82%,1fr));
   align-items: center;
   justify-content: center;
   padding: 1.3rem;
   grid-gap: 30px;
   grid-template-rows: 6;
   min-width: 191px;
+    }
 }
+
 </style>

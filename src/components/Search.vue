@@ -21,21 +21,23 @@ export default {
   components: {
     ComicCard,
   },
-  name: "FeaturedComics",
+  name: "Search",
   mounted() {
     this.getComics();
+    
   },
 
   data() {
     return {
       comics: null,
+      searchKey: "aero",
     };
   },
   methods: {
     getComics() {
       axios
         .get(
-          "https://gateway.marvel.com/v1/public/comics?limit=30&ts=100&apikey=9ba68562b5c70ba6442264f6c5add1c2&hash=cdf3beb7b14c2e38b26b3f2fdef6a2ee"
+          "https://gateway.marvel.com:443/v1/public/characters?name="+this.searchKey+"&ts=100&apikey=9ba68562b5c70ba6442264f6c5add1c2&hash=cdf3beb7b14c2e38b26b3f2fdef6a2ee"
         )
         .then((response) => {
           this.comics = response.data.data.results;

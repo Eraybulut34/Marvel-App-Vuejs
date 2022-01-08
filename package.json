@@ -31,7 +31,9 @@
         "eslint-plugin-vue": "^6.2.2",
         "prettier": "^2.2.1",
         "vue-template-compiler": "^2.6.11",
-        "vue-svg-loader": "^0.16.0"
+        "vue-svg-loader": "^0.16.0",
+        "postcss-custom-media": "^7.0.8",
+        "postcss-nested": "^4.2.3"
     },
     "eslintConfig": {
         "root": true,

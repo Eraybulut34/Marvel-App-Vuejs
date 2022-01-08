@@ -28,6 +28,7 @@
 </template>
 
 <script>
+
 import HeroHeader from "@/components/HeroHeader.vue";
 import axios from "axios";
 export default {
