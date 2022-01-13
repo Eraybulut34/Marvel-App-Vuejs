@@ -70,4 +70,9 @@ export default {
 b-carousel-slide {
   height: 650px;
 }
+
+.container {
+  justify-content: center;
+  align-items: center;
+}
 </style>

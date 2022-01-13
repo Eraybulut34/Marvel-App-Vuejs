@@ -32,6 +32,7 @@ export default {
 img{
     margin: auto;
     height: 420px;
+    size: cover;
 }
 .hero-header{
     display: flex;

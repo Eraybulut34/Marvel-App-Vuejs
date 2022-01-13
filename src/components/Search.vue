@@ -30,7 +30,7 @@ export default {
   data() {
     return {
       comics: null,
-      searchKey: "aero",
+      searchKey: 'alex'
     };
   },
   methods: {

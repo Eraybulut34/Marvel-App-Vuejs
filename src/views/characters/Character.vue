@@ -81,8 +81,8 @@ export default {
   size: cover;
   height: 25rem;
 }
-
 .navbar-lower {
+
   display: flex;
   justify-content: center;
   height: 66px;

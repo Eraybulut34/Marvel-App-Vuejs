@@ -50,12 +50,18 @@ export default {
 <style scoped>
 .featured-comics {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(15.82%,1fr));;
-  align-items: center;
-  justify-content: center;
-  padding: 1.3rem;
-  grid-gap: 30px;
-  grid-template-rows: 6;
-  min-width: 191px;
+  grid-template-columns: repeat(auto-fit, minmax(33.5%, 1fr));
+  max-width: 100%;
+  justify-content: space-around;
+  @media (--t) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.82%, 1fr));
+    align-items: center;
+    justify-content: center;
+    padding: 1.3rem;
+    grid-gap: 30px;
+    grid-template-rows: 6;
+    min-width: 191px;
+  }
 }
 </style>
