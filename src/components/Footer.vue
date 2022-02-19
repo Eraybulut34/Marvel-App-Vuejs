@@ -27,11 +27,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .footer {
+  margin-top: 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
-  height: 380px;
+  height: 15rem;
   background-color: #202020;
   color: #fff;
   align-items: center;

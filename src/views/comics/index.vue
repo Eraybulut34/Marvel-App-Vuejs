@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="comics">
     <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -39,7 +39,6 @@
         </template>
       </b-carousel-slide>
     </b-carousel>
-
     <FeaturedComics/>
   </div>
 </template>
@@ -69,10 +68,5 @@ export default {
 <style scoped>
 b-carousel-slide {
   height: 650px;
-}
-
-.container {
-  justify-content: center;
-  align-items: center;
 }
 </style>

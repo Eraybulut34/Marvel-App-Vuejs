@@ -26,15 +26,21 @@ export default {
 <style scoped>
 .comic-card {
   margin: auto;
+  max-width: 16rem;
+  max-height: 24rem;
+  margin-top: 2.5rem;
 }
 
 .up {
   max-width: 191.66px;
+  
 }
 
 img {
   width: 224px;
   height: 336px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888888;
 }
 .down {
   position: relative;

@@ -1,20 +1,27 @@
 <template>
   <div class="hello">
-   <!-- ----- aşa -->
+
       <nav class="navbar-lower">
-        <router-link to="/characters" class="route-item">
+
+        <router-link to="/characters" class="route-item current-route" v-if="this.$route.name =='Characters'">
           CHARACTERS
         </router-link>
-        <router-link to="/comics" class="route-item">
-        COMICS
+        <router-link to="/characters" class="route-item " v-else>
+          CHARACTERS
         </router-link>
-        <router-link to="/events" class="route-item">
-        EVENTS
+
+        <router-link to="/comics" class="route-item  current-route" v-if="this.$route.name =='Comics'">
+          COMICS
         </router-link>
-        <!-- <router-link to="/creators" class="route-item">
-CREATORS
-          </router-link>
-        <router-link to="/stories" class="route-item">STORIES</router-link> -->
+        <router-link to="/comics" class="route-item" v-else>
+          COMICS</router-link>
+
+        <router-link to="/events" class="route-item  current-route" v-if="this.$route.name =='Events'">
+          EVENTS
+        </router-link>
+        <router-link to="/events" class="route-item" v-else>
+          EVENTS
+        </router-link>
       </nav>
   </div>
 </template>
@@ -25,7 +32,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .navbar-lower{
   display: flex;
@@ -47,6 +53,12 @@ justify-content: center;
     font-family: "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
     font-size: 12px;
     font-style: inherit;
+    font-weight: bold;
+    padding: 0px 10px;
+}
+.route-item:hover{
+  background-color: rgb(219, 34, 34);
+  border-radius: 10px;
 }
 li{
   margin: 0 18px;
@@ -62,5 +74,8 @@ li{
 }
 ul {
   list-style-type: none;
+}
+.current-route{
+  border-bottom: 4px solid #e62429;
 }
 </style>

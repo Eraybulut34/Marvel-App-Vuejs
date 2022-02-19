@@ -1,18 +1,16 @@
 <template>
   <div class>
     <MainHeader />
-    <AdBanner />
+    <AdBanner/>
 <div class="container">    <div class="featured">
       <div class="featured-title">FEATURED CHARACTERS</div>
       <FeaturedCharacters />
     </div>
-    <Search/>
     </div>
   </div>
 </template>
 
 <script>
-import Search from "@/components/Search.vue"
 import MainHeader from "@/components/MainHeader.vue";
 import AdBanner from "@/components/AdBanner.vue";
 import FeaturedCharacters from "@/components/FeaturedCharacters.vue";
@@ -23,7 +21,6 @@ export default {
     MainHeader,
     AdBanner,
     FeaturedCharacters,
-    Search,
   },
 };
 </script>

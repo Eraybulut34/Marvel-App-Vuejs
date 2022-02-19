@@ -1,7 +1,13 @@
 <template>
   <div class="ad-banner">
     <div class="banner-inner">
-      <img src="../assets/images/adbanner.jpg" alt="img" href="www.marvel.com" /> <br />
+      <img
+        class="d-none img-fluid w100"
+        src="../assets/images/adbanner.jpg"
+        alt="img"
+        href="www.marvel.com"
+      />
+      <br />
       Advertise
     </div>
   </div>
@@ -16,20 +22,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-img{
- margin-top: 32px;
-
+img {
+  margin-top: 32px;
+  display: none;
 }
 
 .ad-banner {
- 
   height: 165px;
   background-color: #202020;
   padding: auto;
-   
 }
 .banner-inner {
-   display: block;
+  display: block;
   margin: auto;
   width: 50%;
   height: 50%;

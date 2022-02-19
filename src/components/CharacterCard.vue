@@ -37,6 +37,8 @@ export default {
 img {
   width: 191.66px;
   height: 210px;
+      border-radius: 5px;
+  
 }
 .border {
   background-color: #e62429;
@@ -49,6 +51,8 @@ img {
   width: 191.66px;
   height: 145px;
   position: relative;
+ display: flex;
+ align-items: center;
 }
 .down:before {
   border-bottom-color: transparent;

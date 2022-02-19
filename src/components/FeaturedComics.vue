@@ -1,15 +1,23 @@
 <template>
   <div>
+    <div class="loading" v-if="!comics">
+      <div class="loading-spinner">
+        <b-spinner style="width: 3rem; height: 3rem;" label="Large Spinner" />
+      </div>
+    </div>
     <div class="featured-comics">
       <div v-for="comic in comics" :key="comic.id">
-      <router-link :to="{ name: 'comic', params: {id:comic.id} }">
-      <ComicCard
-        :comicPageUrl="'comics/'+comic.id"
-        :key="comic.id"
-        :image-url="comic.thumbnail.path + '.jpg'"
-        :comicName="comic.title"
-      /></router-link>
-    </div>
+        <router-link
+          :to="{ name: 'ComicCharacters', params: { id: comic.id } }"
+          class="featured-comics-card"
+        >
+          <ComicCard
+            :comicPageUrl="'comics/' + comic.id"
+            :key="comic.id"
+            :image-url="comic.thumbnail.path + '.jpg'"
+            :comicName="comic.title"
+        /></router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -45,22 +53,24 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
 .featured-comics {
-  display: grid;
-grid-template-columns: repeat(auto-fit,minmax(40%,1fr));
-max-width: 100%;
-justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
   @media (--t) {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(15.82%,1fr));;
-  align-items: center;
-  justify-content: center;
-  padding: 1.3rem;
-  grid-gap: 30px;
-  grid-template-rows: 6;
-  min-width: 191px;
+   display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
   }
+}
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 80rem;
 }
 </style>
