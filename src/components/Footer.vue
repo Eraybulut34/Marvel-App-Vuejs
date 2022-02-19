@@ -31,7 +31,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 15rem;
+  height: 12rem;
   background-color: #202020;
   color: #fff;
   align-items: center;
