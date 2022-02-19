@@ -3,7 +3,7 @@
     <div class="navbars">
       <NavbarUpper />
       <NavbarLower />
-      <PromoItem v-if="0 === 1" />
+      <PromoItem v-if="false" />
       
     </div>
     <router-view /><Footer/>
