@@ -40,12 +40,7 @@ img{
     background-color: #151515;
     background-size: cover;
     grid-template-rows: repeat(2);
-        @media screen and (max-width: 767px) {
-      display:inline-block;
-      
-    }
-    
-
+  
 }
 .hero-header:before {
   border-bottom-color: transparent;
@@ -72,6 +67,10 @@ img{
     text-align: center;
     margin: auto;
         background-color: #151515;
+                @media screen and (max-width: 767px) {
+      display:none;
+      
+    }
 
 
 }
