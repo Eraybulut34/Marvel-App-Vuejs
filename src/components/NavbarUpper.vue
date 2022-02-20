@@ -1,22 +1,26 @@
 <template>
-  <div class="hello">
-    <router-link to="/" class="navbar-upper"><Logo/></router-link>
+  <div>
+    <router-link to="/" class="navbar-upper"
+      ><Logo />
+      </router-link
+    >
   </div>
 </template>
 
 <script>
-import Logo from '@/icons/logo.svg'
+import Logo from "@/icons/logo.svg";
 export default {
+  data() {
+    return {};
+  },
   name: "NavbarUpper",
   components: {
-      Logo
-  }
+    Logo,
+  },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 .navbar-upper {
   display: flex;
   justify-content: center;
@@ -30,11 +34,7 @@ export default {
     sans-serif;
   border-bottom: 1px solid #393939;
 }
-
-li {
-  margin: 0 18px;
-}
-ul {
-  list-style-type: none;
+h4 {
+  color: red;
 }
 </style>

@@ -16,6 +16,10 @@ import AdBanner from "@/components/AdBanner.vue";
 import FeaturedCharacters from "@/components/FeaturedCharacters.vue";
 
 export default {
+data(){
+return{
+}
+},
   name: "Characters",
   components: {
     MainHeader,
