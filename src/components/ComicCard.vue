@@ -25,10 +25,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .comic-card {
-  margin: auto;
   max-width: 16rem;
   max-height: 24rem;
-  margin-top: 2.5rem;
+  margin: 2.5rem;
+
+
+
 }
 
 .up {
@@ -39,7 +41,7 @@ export default {
 img {
   width: 224px;
   height: 336px;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 5px 5px 5px #888888;
 }
 .down {

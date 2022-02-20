@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="featured-news">
+    <Loading v-if="!news"/>
+    <div class="featured-news" v-else>
       <div v-for="n in news" :key="n.id">
       <router-link :to="{ name: 'event', params: {id:n.id} }">
       <newsCard
@@ -15,11 +16,13 @@
 </template>
 
 <script>
+import Loading from "@/components/Loading.vue";
 import newsCard from "@/components/NewsCard.vue";
 import axios from "axios";
 export default {
   components: {
     newsCard,
+    Loading,
   },
   name: "NewsList",
   mounted() {

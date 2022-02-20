@@ -28,6 +28,7 @@ export default {
 <style scoped>
 .footer {
   margin-top: 2rem;
+  margin-bottom: 0px;
   display: flex;
   justify-content: space-around;
   align-items: center;

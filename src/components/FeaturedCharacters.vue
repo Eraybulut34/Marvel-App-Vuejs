@@ -1,9 +1,7 @@
 <template>
   <div>
-    <div class="loading" v-if="!characters">
-      <b-spinner style="width: 3rem; height: 3rem;" label="Large Spinner"/>
-    </div>
-    <div class="featured-characters" v-else>
+   <Loading v-if="!characters"/>
+    <div class="featured-characters">
       <div v-for="character in characters" :key="character.id">
         <router-link
           :to="{ name: 'CharacterComics', params: { id: character.id } }"
@@ -21,11 +19,13 @@
 </template>
 
 <script>
+import Loading from "@/components/Loading.vue";
 import CharacterCard from "@/components/CharacterCard.vue";
 import axios from "axios";
 export default {
   components: {
     CharacterCard,
+    Loading,
   },
   name: "FeaturedCharacters",
   mounted() {
@@ -54,10 +54,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .featured-characters {
+  margin-left: 1rem;
+  max-width: 65rem;
+  overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(33.5%, 1fr));
   max-width: 100%;
-  justify-content: space-evenly;
+align-items: center;
   @media (--t) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15.82%, 1fr));
@@ -69,11 +72,5 @@ export default {
     min-width: 191px;
   }
 }
-.loading{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 100%;
-  min-height: 80rem;
-}
+
 </style>

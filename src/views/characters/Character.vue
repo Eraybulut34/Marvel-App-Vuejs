@@ -67,13 +67,9 @@ export default {
 </script>
 
 <style scoped>
-/* .character-page{
-  display: flex;
-  margin: 0 auto;
-  background-size: cover;
-  height: 25rem;
-
-} */
+.character-page{
+  overflow: hidden;
+}
 
 .character-thumbnail {
   display: flex;
@@ -82,7 +78,14 @@ export default {
   height: 25rem;
 }
 .navbar-lower {
-
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #202020;
+  border-top: 1px solid #e5e5e5;
+@media(--t){
   display: flex;
   justify-content: center;
   height: 66px;
@@ -94,6 +97,7 @@ export default {
   z-index: 90;
   position: absolute;
   margin-left: 35px;
+}
 }
 .route-item {
   padding: 30px 20px;

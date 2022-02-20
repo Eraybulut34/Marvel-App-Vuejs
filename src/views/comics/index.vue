@@ -1,5 +1,5 @@
 <template>
-  <div class="comics">
+  <div>
     <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -39,7 +39,8 @@
         </template>
       </b-carousel-slide>
     </b-carousel>
-    <FeaturedComics/>
+    <div class="featured-comics">
+    <FeaturedComics/></div>
   </div>
 </template>
 
@@ -66,7 +67,19 @@ export default {
 </script>
 
 <style scoped>
+.featured-comics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 b-carousel-slide {
   height: 650px;
+
 }
+ @media (max-width: 576px) {
+b-carousel{
+  margin-top: 200rem;
+}
+  }
+
 </style>

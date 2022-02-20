@@ -27,17 +27,31 @@ export default {
 <style scoped>
 .character-card {
   margin: auto;
-  padding: 1.3rem;
+  overflow: hidden;
+  @media (max-width: 767px) {
+    min-width: 15rem;
+    min-height: 24rem;
+    margin-top: 2.5rem;
+    max-width: 15rem;
+  }
 }
+.up{
+  max-width: 191.66px !important;
 
-.up {
-  max-width: 191.66px;
+     @media (max-width: 767px) {
+    max-width: 15rem;
+    overflow: hidden;
+  }
 }
 
 img {
   width: 191.66px;
   height: 210px;
       border-radius: 5px;
+   @media (max-width: 767px) {
+    max-width: 8rem;
+    max-height: 16rem;
+  }
   
 }
 .border {
@@ -45,6 +59,9 @@ img {
   height: 4px;
   width: 191.66px;
   margin-top: 0px;
+     @media (max-width: 767px) {
+    max-width: 8rem;
+  }
 }
 .down {
   background: #151515;
@@ -53,6 +70,11 @@ img {
   position: relative;
  display: flex;
  align-items: center;
+ justify-content: center;
+   @media (max-width: 767px) {
+    max-width: 8rem;
+    max-height: 16rem;
+  }
 }
 .down:before {
   border-bottom-color: transparent;
@@ -74,7 +96,6 @@ img {
   background-color: rgb(216, 8, 18);
 }
 .down-text {
-  padding: 16px 24px 17px 20px;
   font: 400 16px/1.1 RobotoCondensed Bold, Trebuchet MS, Helvetica, Arial,
     sans-serif;
   letter-spacing: 1px;

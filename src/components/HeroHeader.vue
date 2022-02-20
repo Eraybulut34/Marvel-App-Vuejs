@@ -40,6 +40,10 @@ img{
     background-color: #151515;
     background-size: cover;
     grid-template-rows: repeat(2);
+        @media screen and (max-width: 767px) {
+      display:inline-block;
+      
+    }
     
 
 }
@@ -55,6 +59,11 @@ img{
   right: 0;
   top: 370px;
   z-index: 40;
+
+  @media screen and (max-width: 767px) {
+    display:none;
+  }
+
 }
 
 .hero-text{
@@ -62,6 +71,8 @@ img{
     color: #fff;
     text-align: center;
     margin: auto;
+        background-color: #151515;
+
 
 }
 </style>

@@ -39,6 +39,7 @@ export default {
     justify-content: center;
     color: #fff;
     display: inline-block;
+    text-align: center;
 }
 .header-title{
     font: 500 26px/1 RobotoCondensed Bold,Trebuchet MS,Helvetica,Arial,sans-serif;

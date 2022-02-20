@@ -29,10 +29,12 @@ export default {
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  border: 0;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
   font-family: inherit;
+  font-size: 100%;
+  margin-bottom: 0px;
 }
 .navbars {
   position: fixed;

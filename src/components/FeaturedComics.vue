@@ -1,11 +1,7 @@
 <template>
   <div>
-    <div class="loading" v-if="!comics">
-      <div class="loading-spinner">
-        <b-spinner style="width: 3rem; height: 3rem;" label="Large Spinner" />
-      </div>
-    </div>
-    <div class="featured-comics">
+    <Loading v-if="!comics"/>
+      <div class="featured-comics" v-else>
       <div v-for="comic in comics" :key="comic.id">
         <router-link
           :to="{ name: 'ComicCharacters', params: { id: comic.id } }"
@@ -23,11 +19,13 @@
 </template>
 
 <script>
+import Loading from "@/components/Loading.vue";
 import ComicCard from "@/components/ComicCard.vue";
 import axios from "axios";
 export default {
   components: {
     ComicCard,
+    Loading,
   },
   name: "FeaturedComics",
   mounted() {
@@ -56,21 +54,16 @@ export default {
 
 <style scoped>
 .featured-comics {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  @media (--t) {
-   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-  }
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
+@media (--t) {
+display:flex;
+flex-wrap:wrap;
+justify-content:space-around;
+
+
 }
-.loading{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 100%;
-  min-height: 80rem;
 }
 </style>
