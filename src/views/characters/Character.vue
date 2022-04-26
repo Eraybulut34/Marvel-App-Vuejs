@@ -84,7 +84,6 @@ export default {
   width: 100%;
   height: 5rem;
   background-color: #202020;
-  border-top: 1px solid #e5e5e5;
 @media(--t){
   display: flex;
   justify-content: center;

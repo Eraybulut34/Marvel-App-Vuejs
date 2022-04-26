@@ -27,9 +27,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .footer {
-  margin-top: 2rem;
-  margin-bottom: 0px;
   display: flex;
+  position: inherit;
   justify-content: space-around;
   align-items: center;
   height: 12rem;

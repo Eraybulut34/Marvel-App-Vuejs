@@ -6,7 +6,8 @@
       <PromoItem v-if="false" />
       
     </div>
-    <router-view /><Footer/>
+    <router-view />
+    <div class="footer"><Footer/></div>
   </div>
 </template>
 
@@ -35,6 +36,8 @@ export default {
   font-family: inherit;
   font-size: 100%;
   margin-bottom: 0px;
+}
+.footer{
 }
 .navbars {
   position: fixed;

@@ -55,7 +55,7 @@ export default {
 <style scoped>
 .featured-characters {
   margin-left: 1rem;
-  max-width: 65rem;
+  max-width: 100rem;
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(33.5%, 1fr));

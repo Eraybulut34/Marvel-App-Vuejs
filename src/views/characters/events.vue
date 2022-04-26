@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="featured-comics">
+    <Loading v-if="!comics"/>
+    <div class="featured-comics" v-else>
       <div v-for="comic in comics" :key="comic.id">
       <router-link :to="{ name: 'comic', params: {id:comic.id} }">
       <ComicCard
@@ -15,11 +16,13 @@
 </template>
 
 <script>
+import Loading from "@/components/Loading.vue";
 import ComicCard from "@/components/ComicCard.vue";
 import axios from "axios";
 export default {
   components: {
     ComicCard,
+    Loading
   },
   name: "CharacterEvents",
   mounted() {
